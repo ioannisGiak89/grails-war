@@ -22,6 +22,11 @@ run tomcat and the app will be accessible at
 
 `http://localhost:8080/grails/app/`
 
+### DockerFile
+
+The docker file used for the docker image can be found at [Dockerfile](https://github.com/ioannisGiak89/docker/blob/master_grails_tomacat_war/grails/Dockerfile)
+And here is the [image](https://hub.docker.com/r/ioannisgiak89/grails/tags/)
+
 ## The bug 
 
 Even though grails builds the war file using the right environment when you access the app the 
