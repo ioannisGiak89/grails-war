@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProfile name="development, staging, production">
+        <springProperty name="LOG_FILE" source="logging.file" />
+
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <encoder class="net.logstash.logback.encoder.LogstashEncoder"/>
+            <file>${LOG_FILE}.json</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${LOG_FILE}.%d.json.gz</fileNamePattern>
+                <maxHistory>30</maxHistory>
+            </rollingPolicy>
+        </appender>
+
+        <root level="ALL">
+            <appender-ref ref="FILE" />
+        </root>
+    </springProfile>
+</configuration>

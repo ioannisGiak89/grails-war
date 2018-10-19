@@ -1,0 +1,21 @@
+# Copy this file to docker-compose.override.yml and set the right values
+version: "3.0"
+
+services:
+  web:
+    environment:
+#      Flag for running the app
+#      Runs `catalanina.sh` if set to true
+#      Keeps the container alive so you can exec and debug
+      - RUN_APP=true
+#      Env to build the war file
+      - APP_ENV=STAGING
+#      Set UID and GID for grails user. Default values are 1000 for Ubuntu
+#      These values should match your host machines' to avoid permission errors
+      - GRAILS_UID=1000
+      - GRAILS_GID=1000
+    volumes:
+#       Mount your local .gradle and .m2 dirs
+      - ~/.gradle:/home/grails/.gradle
+      - ~/.m2:/home/grails/.m2
+

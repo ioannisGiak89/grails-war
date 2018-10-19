@@ -1,0 +1,22 @@
+version: "3.0"
+
+services:
+  web:
+    image: ioannisgiak89/grails:3.3.8-tomcat
+    environment:
+      - CONTEXT_BASE_FILE_NAME=grails#app
+      - CONTEXT_PATH=\/grails\/app
+#      Set these variables in docker-compose.override.yml
+#      - RUN_APP=true
+#      - APP_ENV=STAGING
+#      - GRAILS_UID=1000
+#      - GRAILS_GID=1000
+    ports:
+      - 8080:8080
+      - 5005:5005
+    volumes:
+      - ./:/app
+#      Set these variables in docker-compose.override.yml
+#      - ~/.gradle:/home/grails/.gradle
+#      - ~/.m2:/home/grails/.m2
+
