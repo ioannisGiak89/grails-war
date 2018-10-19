@@ -33,6 +33,7 @@ Even though grails builds the war file using the right environment when you acce
 `Environment.current.name` value is set to `development`
 
 To replicate:
+
 Run `docker-compose up` with: 
 
 ```
