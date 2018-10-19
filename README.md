@@ -24,7 +24,7 @@ run tomcat and the app will be accessible at
 
 ### DockerFile
 
-The docker file used for the docker image can be found at [Dockerfile](https://github.com/ioannisGiak89/docker/blob/master_grails_tomacat_war/grails/Dockerfile)
+The docker file used for the docker image can be found at [Dockerfile](https://github.com/ioannisGiak89/docker/blob/master_grails_tomacat_war/grails/Dockerfile).
 And here is the [image](https://hub.docker.com/r/ioannisgiak89/grails/tags/)
 
 ## The bug 
